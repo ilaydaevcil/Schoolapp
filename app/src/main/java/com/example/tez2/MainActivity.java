@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-   TextView mainkullaniciadi,maintelefon,mainemail;
+   TextView mainusers,mainphone,mainemail;
    FirebaseFirestore fStore;
    FirebaseAuth fAuth;
    String userId;
@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mainkullaniciadi=findViewById(R.id.mainkullaniciAdi);
-        maintelefon=findViewById(R.id.maintelefon);
+        mainusers=findViewById(R.id.mainkullaniciAdi);
+        mainphone=findViewById(R.id.maintelefon);
         mainemail=findViewById(R.id.mainemail);
 
         fAuth=FirebaseAuth.getInstance();
@@ -44,14 +44,16 @@ public class MainActivity extends AppCompatActivity {
         userId=fAuth.getCurrentUser().getUid();
 
         DocumentReference documentReference= fStore.collection("kullanicilar").document(userId);
+        //kullanicilar : in database users table
+        //in this table : email, usersname and phone
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                mainkullaniciadi.setText(documentSnapshot.getString("kullaniciAdi"));
+                mainusers.setText(documentSnapshot.getString("kullaniciAdi"));
                 //kullaniciAdi: userName
                 mainemail.setText(documentSnapshot.getString("email"));
 
-                maintelefon.setText(documentSnapshot.getString("telefon"));
+                mainphone.setText(documentSnapshot.getString("telefon"));
 
                 //telefon: phone .
 
@@ -66,18 +68,18 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    public void DersNotlari(View view) {
+    public void LessonsNotes(View view) {
         //dersNotları : LessonsNotes
-        startActivity(new Intent(getApplicationContext(),BolumlerActivity.class));
+        startActivity(new Intent(getApplicationContext(),DepartmensActivity.class));
     }
 
-    public void Duyurular(View view) {
+    public void Announcement(View view) {
         //duyurular: announcements
-        startActivity(new Intent(getApplicationContext(),DuyurularActivity.class));
+        startActivity(new Intent(getApplicationContext(),AnnouncementActivity.class));
 
     }
 
-    public void GezilecekYerler(View view) {
+    public void PlacesToVisit(View view) {
         //its not important now. its easy to do this part
         startActivity(new Intent(getApplicationContext(),GezilecekYerActivity.class));
     }

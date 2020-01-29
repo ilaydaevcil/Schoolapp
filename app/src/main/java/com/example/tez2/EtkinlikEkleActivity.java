@@ -170,7 +170,7 @@ public class EtkinlikEkleActivity extends AppCompatActivity {
 
         EtkinlikModel etkinlikModel=new EtkinlikModel(title,description,basTarih,sonTarih);
         etkinlikRef.add(etkinlikModel);
-        startActivity(new Intent(getApplicationContext(),DuyurularActivity.class));
+        startActivity(new Intent(getApplicationContext(),AnnouncementActivity.class));
 
 
        /* AlertDialog alertDialog = new AlertDialog.Builder(EtkinlikEkleActivity.this).create();

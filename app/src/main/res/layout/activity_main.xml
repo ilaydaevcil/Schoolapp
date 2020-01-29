@@ -105,10 +105,11 @@ tools:context=".MainActivity">
 
         <ImageButton
             android:id="@+id/dersnotu"
+
             android:layout_width="200dp"
             android:layout_height="160dp"
             android:background="@drawable/dersnotlari"
-            android:onClick="DersNotlari">
+            android:onClick="LessonsNotes">
 
         </ImageButton>
 
@@ -118,7 +119,7 @@ tools:context=".MainActivity">
             android:layout_width="200dp"
             android:layout_height="150dp"
             android:background="@drawable/duyurular"
-            android:onClick="Duyurular"></ImageButton>
+            android:onClick="Announcement"></ImageButton>
 
         <ImageButton
             android:id="@+id/gezilecekyer"
@@ -126,7 +127,7 @@ tools:context=".MainActivity">
             android:layout_width="200dp"
             android:layout_height="170dp"
             android:background="@drawable/gezil"
-            android:onClick="GezilecekYerler">
+            android:onClick="PlacesToVisit">
 
         </ImageButton>
 
@@ -137,7 +138,7 @@ tools:context=".MainActivity">
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginEnd="16dp"
-        android:text="Ders Notu eklemek, aramak için bu butona tıklayınız"
+        android:text="Lessons Note part"
         android:textColor="#B95C5C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -151,7 +152,7 @@ tools:context=".MainActivity">
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginEnd="16dp"
-        android:text="Duyuru, etkinlik eklemek için bu butona tıklayınız"
+        android:text="Announcement"
         android:textColor="#B95C5C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -163,7 +164,7 @@ tools:context=".MainActivity">
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginEnd="16dp"
-        android:text="Turgutlu'da gezilecek yerler ve öğrenci indirimli yerler için bu butona tıklayınız"
+        android:text="plaaces to visit"
         android:textColor="#B95C5C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

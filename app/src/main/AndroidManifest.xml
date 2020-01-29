@@ -11,10 +11,10 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".EtkinlikEkleActivity"></activity>
         <activity android:name=".admin" />
-        <activity android:name=".DerslerActivity" />
-        <activity android:name=".DuyurularActivity" />
+        <activity android:name=".LessonsActivity" />
+        <activity android:name=".AnnouncementActivity" />
         <activity android:name=".GezilecekYerActivity" />
-        <activity android:name=".BolumlerActivity" />
+        <activity android:name=".DepartmensActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
